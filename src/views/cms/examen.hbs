@@ -1,0 +1,195 @@
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+   {{> menu}}
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+       {{> cabezote}}
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+     
+
+          <div class="row ">
+            {{> messages}}
+            {{> errors}}
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4 border-left-primary">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Examen Final (múltiple choice)</h6>
+               
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <form action="/cms/examen-final" method="POST">
+                      <div class="row">
+                            <div class="col-md-12">
+                              <h3>Completar: </h3>
+                              <br>
+                          </div>
+
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre Completo" required>
+                          </div>
+                        </div>
+
+                          <div class="col-md-4">
+                          <div class="form-group">
+                            <input type="text" name="dni" class="form-control" placeholder="DNI" required>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="Email" required>
+                          </div>
+                        </div>
+
+                      <hr class="p-2">
+
+                      <div class="col-md-12">
+                        <h3>Question: </h3>
+                        <br>
+                      </div>
+                       {{!-- question 1 --}}
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 1) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question1" value="incorrecto" id="p1"> Si<br>
+                            <input type="checkbox" name="question1" value="correcto" id="p2"> No<br>
+                          </div>
+                      </div>
+
+                        {{!-- question 2 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 2) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question2" value="incorrecto" id="p3"> Si<br>
+                            <input type="checkbox" name="question2" value="correcto" id="p4"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 3 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 3) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question3" value="incorrecto" id="p5"> Si<br>
+                            <input type="checkbox" name="question3" value="correcto" id="p6"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 4 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 4) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question4" value="incorrecto" id="p7"> Si<br>
+                            <input type="checkbox" name="question4" value="correcto" id="p8"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 5 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 5) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question5" value="incorrecto" id="p9"> Si<br>
+                            <input type="checkbox" name="question5" value="correcto" id="p10"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 6 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 6) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question6" value="incorrecto" id="p11"> Si<br>
+                            <input type="checkbox" name="question6" value="correcto" id="p12"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 7 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 7) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question7" value="incorrecto" id="p13"> Si<br>
+                            <input type="checkbox" name="question7" value="correcto" id="p14"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 8 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 8) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question8" value="incorrecto" id="p15"> Si<br>
+                            <input type="checkbox" name="question8" value="correcto" id="p16"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 9 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 9) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question9" value="incorrecto" id="p17"> Si<br>
+                            <input type="checkbox" name="question9" value="correcto" id="p18"> No<br>
+                          </div>
+                      </div>
+
+                      
+                        {{!-- question 10 --}}
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label> 10) ¿Es recomendable darle chupete a un bebé de 2 meses?</label><br>
+                            <input type="checkbox" name="question10" value="incorrecto" id="p19"> Si<br>
+                            <input type="checkbox" name="question10" value="correcto" id="p20"> No<br>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg float-right" onclick="resultado()">Resultado</button>
+                      </div>
+        
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+
+          </div> 
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+   
+      {{> footer}}
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+{{>logout}}
