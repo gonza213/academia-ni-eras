@@ -13,14 +13,14 @@
  
  
  
- 
+         
                 <div class="container-fluid">
 
                        {{> messages}}
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">CV Empleadas</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">TP Empleadas</h6>
                             </div>
                             <div class="card-body">
                             <div class="table-responsive">
@@ -28,23 +28,19 @@
                                 <thead>
                                     <tr>
                                     <th>Nombre Completo</th>
-                                    <th>DNI</th>
-                                    <th>Ciudad</th>
-                                    <th>Edad</th>
-                                    <th>CV</th>
+                                    <th>Email</th>
+                                    <th>Trabajo Práctico</th>
                                     <th>Acciones</th>
                                     </tr>
                                 </thead>
-                                {{#each datos}}
+                                {{#each trabajos}}
                                 <tbody>
                                     <tr>
                                     <td>{{nombre}}</td>
-                                    <td>{{dni}}</td>
-                                    <td>{{ciudad}}</td>
-                                    <td>{{edad}}</td>
+                                    <td>{{email}}</td>
                                     <td><a href="{{path}}" class="btn btn-success btn-block btn-sm" download>{{originalname}}</a></td>
                                     <td>
-                                          <form action="/lectura/ver-cv/{{_id}}?_method=DELETE" method="post">
+                                          <form action="/lectura/ver-tp/{{_id}}?_method=DELETE" method="post">
                                             <input type="hidden" name="_method" value="DELETE">
                                              <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                                           </form>
@@ -59,7 +55,6 @@
                         </div>
 
                 </div>
-                        <!-- /.container-fluid -->
 
 
        </div>
