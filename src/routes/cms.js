@@ -64,7 +64,7 @@ router.post('/cms/examen-final', isAuthenticated,  async(req, res) => {
 
     const examen = new Examen({ nombre, dni, email, question1, question2,question3, question4, question5, question6, question7, question8, question9, question10});
     await  examen.save();
-    req.flash('success_msg', '¡Has realizado el examen final');
+    req.flash('success_msg', '¡Has realizado el examen final! Se le enviará la devolución a su email');
     res.redirect('/cms/examen-final');
 
 });
