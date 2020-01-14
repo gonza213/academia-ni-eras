@@ -24,12 +24,80 @@
               <div class="card shadow mb-4 border-left-primary">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Modulo VI</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Modulo VI - Entrevista de trabajo</h6>
                
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  
+                    <div class="row">
+                   <div class="col-md-5">
+                     <div class="card">
+                       <div class="card-header text-center"><h1>Lectura</h1></div>
+                       <div class="card-body text-center">
+                         <div class="form-group">
+                         <h3>Consejos para una entrevista</h3>
+                         <a href="/curso/modulo-VI/entrevista_de_trabajo.pdf" download class="btn btn-danger btn-block btn-sm">Descargar PDF</a>
+                         </div>
+                         <div class="form-group">
+                           <img src="/img/modulo-VI/imagen.jpg" class="img-thumbnail">
+                         </div>
+                         <hr class="p-2">
+                       </div>
+                     </div>
+                   </div>
+
+                   <div class="col-md-7">
+                     <div class="card">
+                       <div class="card-header text-center"><h1>Videos</h1></div>
+                       <div class="card-body">
+                         <div class="form-group">
+                           <h3>Cómo preparar una entrevista para ser niñera</h3>
+                           <iframe width="100%" height="200" src="https://www.youtube.com/embed/jPkOBYuAjz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                         </div>
+                           <div class="form-group">
+                           <h3>Cómo hacer un curriculum en word</h3>
+                           <iframe width="100%" height="200" src="https://www.youtube.com/embed/UY2ZkQ5pPj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+              
+                     <div class="col-md-7 p-4 mx-auto">
+                     <div class="card">
+                      
+                       <div class="card-header"><h3>Trabajo Práctico</h3></div>
+                       <div class="card-body">
+                          <p>Trabajo práctico n°8</p>
+                            <a href="/curso/modulo-VI/TP_N8.docx" download class="btn btn-primary btn-block btn-sm">Descargar WORD</a>
+                          <hr>
+                         <span>Subir Trabajo Practico</span>
+                           <form action='/cms/modulo-1' method="POST" enctype="multipart/form-data">
+                         
+                             <div class="form-group">
+                               <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                             </div>
+                             <div class="form-group">
+                                 <input type="email" name="email" class="form-control" placeholder="Email">
+                             </div>
+                             <div class="input-group mb-3">
+                                <div class="custom-file">
+                                  <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
+                                  <label class="custom-file-label" for="inputGroupFile02">Subir archivo</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-success btn-block btn-sm">
+                                Enviar
+                              </button>
+                            </div>
+                         </form>
+                         {{> messages}}
+                       </div>
+                     </div>
+                   </div>
+              
+                   
+                 </div>
                 </div>
               </div>
             </div>
@@ -42,8 +110,10 @@
 
       </div>
       <!-- End of Main Content -->
-   
+
+  
       {{> footer}}
+
 
     </div>
     <!-- End of Content Wrapper -->
