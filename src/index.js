@@ -1,3 +1,5 @@
+const http = require('http');
+
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
@@ -8,9 +10,11 @@ const passport = require('passport');
 // const morgan = require('morgan');
 const multer = require ('multer');
 const uuid = require('uuid/v4');
+const socketio = require('socket.io');
 
 //INITILIAZATIONS
 const app = express();
+const server = http.createServer(app);
 require('./database');
 require('./config/passport');
 
@@ -65,13 +69,18 @@ app.use(require('./routes/index'));
 app.use(require('./routes/cms'));
 app.use(require('./routes/users'));
 app.use(require('./routes/lectura'));
+app.use(require('./routes/chat'));
 
 
 //STATIC FILES
 app.use(express.static(path.join(__dirname , '/public')));
 
+//SERVER SOCKET.IO
+const io = socketio.listen(server);
+
+require('./socket')(io);
 
 //SERVER IS LISTENNING
-app.listen(app.get('port'), () =>{
+server.listen(app.get('port'), () =>{
     console.log('El servidor esta escuchando puerto: ', app.get('port'));
 });

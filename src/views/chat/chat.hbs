@@ -1,0 +1,63 @@
+<nav class="navbar navbar-light bg-primary">
+    <a href="/chat/chat" class="navbar-brand mx-auto text-light"> <i class="far fa-comments"></i> Foro de la Academia de Niñeras</a>
+    <a href="/cms/inicio" class="btn btn-primary btn-sm"><i class="fas fa-book-open"></i> Ir a la Academia</a>
+</nav>
+
+<div class="col-md-4 mt-5 mx-auto" id="nickWrap">
+    <div class="card">
+         <div class="card-header">
+            <h3>Ingresar tu nombre:</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <button type="submit" class="btn btn-secondary btn-block mt-2"><i class="fas fa-location-arrow"></i> Ingresar</button>
+            </form>
+        </div>
+    </div>   
+</div>
+
+<div class="container" id="contentWrap">
+    <div class="row mt-4">
+        <div class="col-md-6 offset-md-1">
+        <div class="card">
+            <div class="card-header text-center text-primary">
+                <h4>Conversación entre Niñeras</h4>
+            </div>
+            <div class="card-body" id="chat">
+
+            </div>
+           <form id="message-form" class="card-footer">
+              <div class="input-group">
+                   <input type="text" id="message" class="form-control">
+                   <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary"><i class="fas fa-location-arrow"></i> Enviar</button>
+                   </div>
+              </div>
+           </form>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                 <small>Para hablar en privado con otro usuario, debes escribir "/w " luego el <i>usuario</i> y el <i>mje</i>. Ejemplo:<br>
+                 <b>/w luli Hola Como estas?</b></small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>Usuarios</h3>
+            </div>
+            <div class="card-body">
+                <div id="usernames"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<hr>
+
+{{>footer}}
