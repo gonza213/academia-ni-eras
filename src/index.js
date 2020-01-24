@@ -70,7 +70,7 @@ app.use(require('./routes/cms'));
 app.use(require('./routes/users'));
 app.use(require('./routes/lectura'));
 app.use(require('./routes/chat'));
-app.use(require('./routes/email'));
+// app.use(require('./routes/email'));
 
 
 //STATIC FILES

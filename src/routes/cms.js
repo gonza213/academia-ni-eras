@@ -55,18 +55,21 @@ router.get('/cms/modulo-6', isAuthenticated, (req, res) => {
     res.render('cms/modulo-6');
 });
 
-router.get('/cms/examen-final', isAuthenticated, (req, res) => {
+router.get('/cms/etapa-final', isAuthenticated, (req, res) => {
     res.render('cms/examen');
 });
 
 router.post('/cms/examen-final', isAuthenticated,  async(req, res) => {
-    const { nombre, dni, email, question1, question2,question3, question4, question5, question6, question7, question8, question9, question10} = req.body;
+    const { nombre, dni} = req.body;
 
-    const examen = new Examen({ nombre, dni, email, question1, question2,question3, question4, question5, question6, question7, question8, question9, question10});
+    const examen = new Examen({ nombre, dni});
     await  examen.save();
-    req.flash('success_msg', '¡Has realizado el examen final! Se le enviará la devolución a su email');
     res.redirect('/cms/examen-final');
 
+});
+
+router.get('/cms/examen-final', isAuthenticated, (req, res) => {
+    res.render('cms/examen-final');
 });
 
 
