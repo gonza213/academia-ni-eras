@@ -31,7 +31,7 @@ app.set('view engine', '.hbs');
 
 //MIDDLEAWARES
 // app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:true}));
 
 //Archvos
 const storage = multer.diskStorage({
@@ -39,7 +39,7 @@ const storage = multer.diskStorage({
     filename: (req, file, cb, filename) => {
         cb(null, uuid() + path.extname(file.originalname));
     }
-})
+});
 app.use(multer({storage : storage}).single('image'));
 
 app.use(mthovr('_method'));
@@ -70,6 +70,7 @@ app.use(require('./routes/cms'));
 app.use(require('./routes/users'));
 app.use(require('./routes/lectura'));
 app.use(require('./routes/chat'));
+app.use(require('./routes/email'));
 
 
 //STATIC FILES
